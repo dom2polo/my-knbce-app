@@ -2,53 +2,58 @@
 
 import React from 'react';
 import logo from './logo.svg';
-import './App.scss'; // Updated import for CSS
+import './App.scss';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
+        <nav className="navbar navbar-expand-lg navbar-light bg-light">
+          <div className="container">
+            <a className="navbar-brand" href="/">
+              <img src={logo} className="App-logo" alt="logo" />
+              Our Church
+            </a>
+            <button
+              className="navbar-toggler"
+              type="button"
+              data-toggle="collapse"
+              data-target="#navbarNav"
+              aria-controls="navbarNav"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span className="navbar-toggler-icon"></span>
+            </button>
+            <div className="collapse navbar-collapse" id="navbarNav">
+              <ul className="navbar-nav ml-auto">
+                <li className="nav-item">
+                  <a className="nav-link" href="#Welcome-section">
+                    Welcome
+                  </a>
+                </li>
+                <li className="nav-item">
+                  <a className="nav-link" href="#Events-section">
+                    Upcoming Events
+                  </a>
+                </li>
+                <li className="nav-item">
+                  <a className="nav-link" href="#Contact-section">
+                    Contact Us
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+
+        {/* The rest of your content */}
         <img src={logo} className="App-logo" alt="logo" />
         <h1>Welcome to Our Church</h1>
-        <p>
-          Join us in worship and fellowship.
-        </p>
+        <p>Join us in worship and fellowship.</p>
       </header>
 
-      <section className="Welcome-section">
-        <h2>Welcome</h2>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ullamcorper urna ac nulla bibendum, at tristique odio lacinia.
-        </p>
-      </section>
-
-      <section className="Events-section">
-        <h2>Upcoming Events</h2>
-        <ul>
-          <li>Sunday Service - 10:00 AM</li>
-          <li>Bible Study - Wednesday, 7:00 PM</li>
-          {/* Add more events as needed */}
-        </ul>
-      </section>
-
-      <section className="Contact-section">
-        <h2>Contact Us</h2>
-        <p>
-          Feel free to reach out to us for any inquiries or information.
-        </p>
-        <address>
-          <p>123 Church Street</p>
-          <p>Cityville, State 12345</p>
-          <p>Email: info@ourchurch.org</p>
-          <p>Phone: (123) 456-7890</p>
-        </address>
-      </section>
-
-      <footer className="App-footer">
-        <p>
-          © {new Date().getFullYear()} Our Church
-        </p>
-      </footer>
+      {/* The rest of your sections and footer */}
     </div>
   );
 }
